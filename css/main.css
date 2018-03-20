@@ -1,0 +1,238 @@
+
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* GLOBAL */
+.container {
+  margin: 0 auto;
+  max-width: 1150px;
+  background: #fff;
+}
+
+.current {
+  color: #63d488 !important;
+}
+
+.mail {
+  color: #63d488 !important;
+}
+.mail::selection {
+  background: #63d488;
+  color: #fff;
+}
+
+.section-title{
+  color: #333;
+  font-size: 2em;
+  margin: 16px 0 40px 0;
+}
+
+/* page */
+#page {
+  width: 100%;
+  margin-top: 0px;
+  box-sizing: border-box;
+
+}
+
+
+/* HEADER */
+#page header {
+  background-color: #fff;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 3px solid #63d488;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+}
+#page header nav .navInfo {
+  width: 26%;
+  height: 100px;
+  float: left;
+}
+#page header nav .navInfo .names {
+  margin: 26px 0;
+  font-size: 20px;
+}
+#page header nav .navInfo .names .name {
+  margin-bottom: 6px;
+}
+#page header nav .navInfo .names .name::selection {
+  background: #63d488;
+  color: #fff;
+}
+#page header nav .navInfo .names .title {
+  color: #c9c9c9;
+  font-size: 18px;
+}
+#page header nav .navInfo .names .title::selection {
+  background: #63d488;
+  color: #fff;
+}
+#page header nav .navMenu {
+  width: 50%;
+  height: 100px;
+  float: right;
+}
+#page header nav .navMenu a {
+  display: inline-block;
+  color: #3b3a3a;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px;
+  margin: 32px 20px;
+  float: right;
+  transition: color 0.2s ease-in-out;
+}
+#page header nav .navMenu a::selection {
+  background: #63d488;
+  color: #fff;
+}
+#page header nav .navMenu a:hover {
+  color: #63d488;
+}
+
+/* Main Section */
+#page #main-section {
+  padding-top: 30vh;
+  height: 70vh;
+  line-height: 1.5;
+}
+#page #main-section .container{
+  /* margin-top: 20vh; */
+}
+#page #main-section .front-title {
+  font-size: 2.4em;
+  max-width: 1000px;
+}
+#page #main-section .front-title::selection {
+  background: #63d488;
+  color: #fff;
+}
+#page #main-section .description {
+  margin-top: 20px;
+  font-size: 1.6em;
+  animation-delay: 1s;
+}
+#page #main-section .description::selection {
+  background: #63d488;
+  color: #fff;
+}
+#page #main-section #arrowDown{
+  width: 35px;
+  height: 42px;
+  margin-top: 25vh;
+  cursor: pointer;
+}
+#page #main-section #arrowDown .fa-chevron-down {
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #666;
+}
+
+
+/* PORTFOLIO */
+#page #portfolio {
+  padding-bottom: 120px;
+}
+#page #portfolio .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+}
+#page #portfolio .grid .project {
+  height: 400px;
+  background: #63d488;
+}
+
+
+/* SKILLS */
+#page #skills{
+  padding-bottom: 140px;
+}
+#page #skills .section-title{
+  margin-bottom: 10px;
+}
+#page #skills .grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+#page #skills .grid h4.skill {
+  font-size: 1.6em;
+  font-weight: 100;
+  height: 10px;
+  align-self: center;
+}
+
+
+/* CONTACT */
+#page #contact{
+
+}
+#page form{
+  width: 70%;
+  padding: 20px 0;
+  margin-bottom: 80px;
+}
+#page .contact-form{
+
+}
+#page .contact-form form label{
+  font-size: 1.2em;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+#page .contact-form form input{
+  border: none;
+  border-bottom: 2px solid #63d488;
+  background: transparent;
+  box-sizing: border-box;
+  width: 90%;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  padding:6px;
+}
+#page .contact-form form textarea{
+  border: none;
+  border-bottom: 2px solid #63d488;
+  background: transparent;
+  box-sizing: border-box;
+  width: 90%;
+  height: 37px;
+  transition: height .07s ease-in, margin .07s ease-in;
+  font-size: 1.2em;
+  margin-bottom: 75px;
+  margin-left: 2px;
+  resize: none;
+  padding: 6px;
+}
+#page .contact-form form input:focus{
+  border: 2px solid #63d488;
+  outline: none;
+  margin-top: -2px;
+}
+#page .contact-form form textarea:focus{
+  border: 2px solid #63d488;
+  margin-left: 0;
+  outline: none;
+  height: 100px;
+  margin-bottom: 12px;
+}
+#page .contact-form form button{
+  width: 180px;
+  padding: 6px;
+  font-size: 1.2em;
+  background: #63d488;
+  color: #fff;
+  border: none;
+  outline:none;
+}
