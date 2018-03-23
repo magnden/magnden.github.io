@@ -4,14 +4,15 @@ $(document).ready(function(){
 
   var wrapperMenu = $('.wrapper-menu');
   var navMenu = $('.navMenu');
+  navMenu.hide();
 
   wrapperMenu.click(function(){
     wrapperMenu.toggleClass('open');
     // navMenu.toggleClass('showing');
     if ( navMenu.is( ":hidden" ) ) {
-    navMenu.slideDown()
+    navMenu.slideDown("fast")
   } else {
-    navMenu.slideUp();
+    navMenu.slideUp("fast");
   }
 
   });
@@ -28,8 +29,8 @@ $( window ).resize(function() {
   }
 
   if (is_mobile == true) {
-    
-    navMenu.hide();
+
+
 
     // Jumping Arrow
     setInterval(function(){
