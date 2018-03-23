@@ -48,7 +48,7 @@ $(document).ready(function(){
       }
       else {
         emailField.css('border-color', 'red')
-        warning.html('Fill in valid email')
+        warning.html('Fill in valid email');
       }
 
     } else {
@@ -73,7 +73,7 @@ $(window).scroll(function(){
 
 function scrollToPortfolio(){
   $('html, body').animate({
-  scrollTop: $("section#portfolio").offset().top -130
+  scrollTop: $("section#portfolio").offset().top -100
   }, 500);
   $('#toPortfolio').addClass('current');
   $('#toAbout').removeClass('current');
@@ -90,7 +90,7 @@ function scrollToAbout(){
 }
 function scrollToContact(){
   $('html, body').animate({
-  scrollTop: $("section#skills").offset().top + 200
+  scrollTop: $("section#contact").offset().top -100
   }, 500);
   $('#toPortfolio').removeClass('current');
   $('#toAbout').removeClass('current');

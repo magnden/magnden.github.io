@@ -365,6 +365,20 @@ form{
   box-shadow: 0px 4px 41px #ccc;
 }
 
+.contact-form #warning{
+  padding: 12px;
+  font-size: 1.2em;
+  font-weight: 200;
+  background: #EA2027;
+  border-radius: 6px;
+  color: #fff;
+  width: 400px;
+  margin: 20px 0;
+  display: none;
+}
+.contact-form #warning.show{
+  display: block;
+}
 
 
 
