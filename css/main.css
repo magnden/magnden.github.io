@@ -1,7 +1,7 @@
 
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02rem;
 }
 
 /* GLOBAL */
@@ -34,7 +34,6 @@ body {
   width: 100%;
   margin-top: 0px;
   box-sizing: border-box;
-
 }
 
 
@@ -51,13 +50,17 @@ body {
   transition: all 0.4s ease-in-out;
 }
 #page header nav .navInfo {
-  width: 26%;
+  width: 46%;
   height: 100px;
   float: left;
 }
 #page header nav .navInfo .names {
   margin: 26px 0;
+  padding-left: 8px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #page header nav .navInfo .names .name {
   margin-bottom: 6px;
@@ -79,6 +82,9 @@ body {
   height: 100px;
   float: right;
 }
+#page header nav .navMenu.showing {
+  display: flex;
+}
 #page header nav .navMenu a {
   display: inline-block;
   color: #3b3a3a;
@@ -97,14 +103,61 @@ body {
   color: #63d488;
 }
 
+/* Mobile Menu */
+.wrapper-menu {
+  position: absolute;
+  top: 24px;
+  right: 36px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+  display: none;
+}
+
+.wrapper-menu.open {
+  transform: rotate(-45deg);
+}
+
+.wrapper-menu .line-menu {
+  background-color: #3b3a3a;
+  border-radius: 5px;
+  width: 100%;
+  height: 6px;
+}
+
+.wrapper-menu .line-menu.half {
+  width: 50%;
+}
+
+.wrapper-menu .line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.wrapper-menu.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.wrapper-menu .line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.wrapper-menu.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
+
+
 /* Main Section */
 #page #main-section {
   padding-top: 30vh;
   height: 70vh;
   line-height: 1.5;
-}
-#page #main-section .container{
-  /* margin-top: 20vh; */
 }
 #page #main-section .front-title {
   font-size: 2.4em;
@@ -234,4 +287,131 @@ body {
   color: #fff;
   border: none;
   outline:none;
+}
+
+
+
+/*/////////////*/
+/*MEDIA QUERIES*/
+/*/////////////*/
+
+
+/* iPhone 4-5 */
+@media only screen
+   and (max-width : 320px) {
+   /* Styles here */
+}
+/* iPhone 6-8 */
+@media only screen
+   and (max-width : 414px) {
+     .wrapper-menu{
+       display: flex;
+     }
+     #page header nav .navInfo {
+       width: 30%;
+       height: 100px;
+       float: left;
+     }
+     #page header nav .navInfo .names .title {
+       display: none;
+     }
+     #page header nav .navInfo .names .name {
+       font-size: 22px;
+       margin-left: 10px;
+     }
+
+     #page header nav .navMenu {
+       text-align: center;
+       margin:0;
+       width: 100%;
+       height: auto;
+       float: none;
+       display: flex;
+       flex-direction: column-reverse;
+       position: absolute; top: 100px;
+       background: #fff;
+       box-shadow:  0px 20px 50px #ccc;
+     }
+     #page header nav .navMenu a {
+       font-size: 22px;
+       padding: 16px;
+       margin: 4px;
+     }
+
+     /* Main Section */
+     #page #main-section {
+       padding: 160px 10px 0 10px;
+     }
+     #page #main-section .front-title {
+       font-size: 1.8em;
+     }
+     #page #main-section .description {
+       font-size: 1.5em;
+       margin-bottom: 150px;
+     }
+     #page #main-section #arrowDown{
+       display: none;
+     }
+
+
+}
+
+/* Tablet */
+@media only screen
+   and (max-width : 768px) {
+     .wrapper-menu{
+       display: flex;
+     }
+     #page header nav .navInfo {
+       width: 30%;
+       height: 100px;
+       float: left;
+     }
+     #page header nav .navInfo .names .title {
+       display: none;
+     }
+     #page header nav .navInfo .names .name {
+       font-size: 22px;
+       margin-left: 10px;
+     }
+
+     #page header nav .navMenu {
+       text-align: center;
+       margin:0;
+       width: 100%;
+       height: auto;
+       float: none;
+       display: flex;
+       flex-direction: column-reverse;
+       position: absolute; top: 100px;
+       background: #fff;
+       box-shadow:  0px 20px 50px #ccc;
+     }
+     #page header nav .navMenu a {
+       font-size: 22px;
+       padding: 16px;
+       margin: 4px;
+     }
+
+     /* Main Section */
+     #page #main-section {
+       padding: 160px 10px 0 10px;
+     }
+     #page #main-section .front-title {
+       font-size: 1.8em;
+     }
+     #page #main-section .description {
+       font-size: 1.5em;
+       margin-bottom: 150px;
+     }
+     #page #main-section #arrowDown{
+       display: none;
+     }
+
+}
+
+/* 13in Laptop */
+@media only screen
+   and (max-width : 1600px) {
+   /* Styles here */
 }
