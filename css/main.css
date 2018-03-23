@@ -2,6 +2,9 @@
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   letter-spacing: 0.02rem;
+  width: 100%;
+  padding:0;
+  margin:0;
 }
 
 /* GLOBAL */
@@ -106,10 +109,10 @@ body {
 /* Mobile Menu */
 .wrapper-menu {
   position: absolute;
-  top: 24px;
+  top: 30px;
   right: 36px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -130,7 +133,7 @@ body {
 }
 
 .wrapper-menu .line-menu.half {
-  width: 50%;
+  width: 100%;
 }
 
 .wrapper-menu .line-menu.start {
