@@ -4,7 +4,25 @@ $(document).ready(function(){
 
   var wrapperMenu = $('.wrapper-menu');
   var navMenu = $('.navMenu');
-  navMenu.hide();
+
+  var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+    if (mobile) {
+        navMenu.hide()
+        is_mobile = true;
+        
+    } else {
+      // Jumping Arrow
+      setInterval(function(){
+        animateArrow();
+      }, 3000);
+
+      // Scroll Animations
+      $('#arrowDown').on('click', scrollToPortfolio)
+      $('#toPortfolio').on('click', scrollToPortfolio)
+      $('#toAbout').on('click', scrollToAbout)
+      $('#toContact').on('click', scrollToContact)
+    }
+
 
   wrapperMenu.click(function(){
     wrapperMenu.toggleClass('open');
@@ -17,53 +35,9 @@ $(document).ready(function(){
 
   });
 
-  var is_mobile = false;
-
 
 });
 
-$( window ).resize(function() {
-  // Check if client is mobile
-  if( $('.navMenu').css('display')=='flex') {
-      is_mobile = true;
-  }
-
-  if (is_mobile == true) {
-
-
-
-    // Jumping Arrow
-    setInterval(function(){
-      animateArrow();
-    }, 3000);
-
-    // Scroll Animations
-    $('#arrowDown').on('click', scrollToPortfolio)
-    $('#toPortfolio').on('click', scrollToPortfolio)
-    $('#toAbout').on('click', scrollToAbout)
-    $('#toContact').on('click', scrollToContact)
-
-    $('#submit-form').on('click', function(){
-      var nameField = $('#name-input');
-      var emailField = $('#email-input');
-      var messageField = $('#message-field');
-      if(nameField.val || emailField.val() || messageField.val()){
-
-        if (emailField.val().indexOf('@') > -1 || emailFieldval().indexOf('.') > -1) {
-          $('footer').css('background-color', 'green')
-        }
-        else {
-          $('footer').css('background-color', 'red')
-        }
-
-      } else {
-        $('footer').css('background-color', 'red')
-      }
-    });
-
-
-  };
-});
 
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
