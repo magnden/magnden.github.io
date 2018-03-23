@@ -9,7 +9,7 @@ $(document).ready(function(){
     if (mobile) {
         navMenu.hide()
         is_mobile = true;
-        
+
     } else {
       // Jumping Arrow
       setInterval(function(){
@@ -33,6 +33,27 @@ $(document).ready(function(){
     navMenu.slideUp("fast");
   }
 
+  });
+  $('#submit-form').on('click', function(){
+    var nameField = $('#name-input');
+    var emailField = $('#email-input');
+    var messageField = $('#message-field');
+    var warning = $('#warning')
+    if(nameField.val || emailField.val() || messageField.val()){
+
+      if (emailField.val().indexOf('@') > -1 || emailField.val().indexOf('.') > -1) {
+
+        // Go through
+
+      }
+      else {
+        emailField.css('border-color', 'red')
+        warning.html('Fill in valid email')
+      }
+
+    } else {
+      $('footer').css('background-color', 'red')
+    }
   });
 
 

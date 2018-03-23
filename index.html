@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1; user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <title>Dennis Magnusson</title>
 
     <!-- CSS -->
@@ -52,33 +52,38 @@
         </section>
 
         <section id="portfolio">
+          <div class="animated fadeIn section-title-box">
+            <div class="container">
+              <h1 class="section-title" id="portfolio-title">My Portfolio</h1>
+            </div>
+          </div>
           <div class="container">
-            <h1 class="animated fadeIn section-title" id="portfolio-title">My Portfolio</h1>
             <div class="grid animated fadeIn">
-              <div class="project "></div>
               <div class="project"></div>
+              <div class="project-desc">
+                <div class="project-title">WebApp</div>
+                <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                <div class="project-langs"><span class="lang">HTML</span> <span class="lang">CSS</span> <span class="lang">JavaScript</span> <span class="lang">jQuery</span></div>
+                <div class="project-btn"><a href="">Check it out</a></div>
+              </div>
               <div class="project"></div>
-              <div class="project"></div>
+              <div class="project-desc">
+                <div class="project-title">SomeSite</div>
+                <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                <div class="project-langs"><span class="lang">Sass</span> <span class="lang">CSS3 Animations</span> <span class="lang">Bootstrap</span> <span class="lang">ReactJS</span></div>
+                <div class="project-btn"><a href="">Check it out</a></div>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- <section id="skills">
-          <div class="container">
-            <h1 class="animated fadeIn section-title">My Skills</h1>
-            <div class="grid animated fadeIn">
-              <h4 class="skill">HTML5</h4>
-              <h4 class="skill">CSS3</h4>
-              <h4 class="skill">Javascript</h4>
-              <h4 class="skill">Jquery</h4>
-              <h4 class="skill">Sass</h4>
+        <section id="contact">
+          <div class="animated fadeIn section-title-box">
+            <div class="container">
+              <h1 class="section-title" id="portfolio-title">Contact</h1>
             </div>
           </div>
-        </section> -->
-
-        <!-- <section id="contact">
           <div class="container">
-            <h1 class="animated fadeIn section-title">Contact</h1>
             <div class="contact-form animated fadeIn">
               <form>
                 <label for="name">Name</label>
@@ -92,10 +97,11 @@
                 <label for="message">Message</label><br>
                 <textarea name="message" id="message-field"></textarea><br>
                 <button id="submit-form" type="button">Send</button>
+                <div id="warning">Please fill in valid Email</div>
               </form>
             </div>
           </div>
-        </section> -->
+        </section>
 
         <footer style="height: 200px; background: #c9c9c9">
           <div class="container">

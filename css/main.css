@@ -6,16 +6,15 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   letter-spacing: 0.02rem;
   width: 100%;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
 /* GLOBAL */
 .container {
   margin: 0 auto;
+  width: 80%;
   max-width: 1150px;
-  background: #fff;
-  padding: 0 20px 0 20px;
 }
 
 .current {
@@ -30,11 +29,30 @@ body {
   color: #fff;
 }
 
-.section-title{
+.section-title {
   color: #333;
   font-size: 2em;
   margin: 16px 0 40px 0;
 }
+
+.section-title-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 80px;
+  padding: 30px 0;
+  background: #63d488;
+  color: white;
+}
+
+.section-title-box .section-title {
+  margin: 0;
+  align-self: center;
+  justify-self: center;
+  color: white;
+}
+
 
 /* page */
 #page {
@@ -43,9 +61,8 @@ body {
   box-sizing: border-box;
 }
 
-
 /* HEADER */
-#page header {
+header {
   background-color: #fff;
   height: 100px;
   position: fixed;
@@ -56,42 +73,42 @@ body {
   z-index: 10;
   transition: all 0.4s ease-in-out;
 }
-#page header nav .navInfo {
+header nav .navInfo {
   width: 46%;
   height: 100px;
   float: left;
 }
-#page header nav .navInfo .names {
+header nav .navInfo .names {
   margin: 26px 0 26px 20px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#page header nav .navInfo .names .name {
+header nav .navInfo .names .name {
   margin-bottom: 6px;
 }
-#page header nav .navInfo .names .name::selection {
+header nav .navInfo .names .name::selection {
   background: #63d488;
   color: #fff;
 }
-#page header nav .navInfo .names .title {
+header nav .navInfo .names .title {
   color: #c9c9c9;
   font-size: 18px;
 }
-#page header nav .navInfo .names .title::selection {
+header nav .navInfo .names .title::selection {
   background: #63d488;
   color: #fff;
 }
-#page header nav .navMenu {
+header nav .navMenu {
   width: 50%;
   height: 100px;
   float: right;
 }
-#page header nav .navMenu.showing {
+header nav .navMenu.showing {
   display: flex;
 }
-#page header nav .navMenu a {
+header nav .navMenu a {
   display: inline-block;
   color: #3b3a3a;
   text-decoration: none;
@@ -101,93 +118,94 @@ body {
   float: right;
   transition: color 0.2s ease-in-out;
 }
-#page header nav .navMenu a::selection {
+header nav .navMenu a::selection {
   background: #63d488;
   color: #fff;
 }
-#page header nav .navMenu a:hover {
+header nav .navMenu a:hover {
   color: #63d488;
 }
 
 /* Mobile Menu */
 .wrapper-menu {
   position: absolute;
-  top: 30px;
+  top: 35px;
   right: 36px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   transition: transform 330ms ease-out;
   display: none;
-  cursor: pointer
+  cursor: pointer;
 }
-
 .wrapper-menu.open {
   transform: rotate(-45deg);
 }
-
 .wrapper-menu .line-menu {
   background-color: #3b3a3a;
   border-radius: 5px;
   width: 100%;
   height: 4px;
 }
-
 .wrapper-menu .line-menu.half {
   width: 50%;
 }
-
 .wrapper-menu .line-menu.start {
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transform-origin: right;
 }
-
 .wrapper-menu.open .line-menu.start {
   transform: rotate(-90deg) translateX(3px);
 }
-
 .wrapper-menu .line-menu.end {
   align-self: flex-end;
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transform-origin: left;
 }
-
 .wrapper-menu.open .line-menu.end {
   transform: rotate(-90deg) translateX(-3px);
 }
 
-
 /* Main Section */
-#page #main-section {
-  padding-top: 30vh;
+#main-section {
   height: 100vh;
   line-height: 1.5;
   overflow: hidden;
 }
-#page #main-section .container {
+#main-section .container {
   height: 100%;
   position: relative;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
-#page #main-section .front-title {
+#main-section .front-title {
   font-size: 2.4em;
+  grid-row: 1 / 2;
+  align-self: end;
+  margin: 0;
+  padding: 0 8px;
 }
-#page #main-section .front-title::selection {
+#main-section .front-title::selection {
   background: #63d488;
   color: #fff;
 }
-#page #main-section .description {
-  margin-top: 20px;
+#main-section .description {
   font-size: 1.6em;
   animation-delay: 1s;
+  grid-row: 2 / 3;
+  margin: 0;
+  padding: 0 8px;
 }
-#page #main-section .description::selection {
+#main-section .description::selection {
   background: #63d488;
   color: #fff;
 }
-#page #main-section #arrowDown{
+#main-section #arrowDown {
   position: absolute;
   width: 35px;
   height: 42px;
@@ -195,68 +213,105 @@ body {
   bottom: 80px;
   left: 20px;
 }
-#page #main-section #arrowDown .fa-chevron-down {
+#main-section #arrowDown .fa-chevron-down {
   font-size: 2.5em;
   cursor: pointer;
   color: #666;
 }
 
-
 /* PORTFOLIO */
-#page #portfolio {
-  padding-bottom: 120px;
+#portfolio {
+  margin-bottom: 120px;
+  color: #333;
 }
-#page #portfolio .grid {
+#portfolio .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: 58% 42%;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
   justify-content: center;
 }
-#page #portfolio .grid .project {
+#portfolio .grid .project {
   height: 400px;
-  background: #63d488;
+  border-top: 3px solid #63d488;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 0px 4px 21px #ccc;
 }
-
-
-/* SKILLS */
-#page #skills{
-  padding-bottom: 140px;
+#portfolio .grid .project:nth-child(1){
+  background: url('http://spyrestudios.com/wp-content/uploads/notes-app.png');
 }
-#page #skills .section-title{
-  margin-bottom: 10px;
+#portfolio .grid .project:nth-child(3){
+  background: url('https://d85wutc1n854v.cloudfront.net/live/products/600x375/WB0X27670.png?v=1.1');
 }
-#page #skills .grid{
+#portfolio .grid .project-desc{
+  height: 90%;
+  padding: 40px 0;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-rows: minmax(20%,40px) minmax(30%, 100px) minmax(20%, ) minmax(10%, );
   align-items: center;
+  font-weight: 500;
 }
-#page #skills .grid h4.skill {
-  font-size: 1.6em;
-  font-weight: 100;
-  height: 10px;
-  align-self: center;
+#portfolio .grid .project-desc .project-title{
+  font-size: 1.8em;
+  font-weight: 700;
+  max-width: 300px;
+  align-self: end;
+}
+#portfolio .grid .project-desc .desc{
+  font-size: 1.5em;
+}
+#portfolio .grid .project-desc .project-langs{
+  font-size: 1.2em;
+  align-self: start;
+}
+#portfolio .grid .project-desc .project-langs .lang{
+  display: inline-block;
+  border: 1px solid #3b3a3a;
+  padding: 2px 12px;
+  margin: 2px 0;
+  border-radius: 20px
+}
+#portfolio .grid .project-desc .project-btn{
+
+}
+#portfolio .grid .project-desc .project-btn a{
+  display: inline-block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 150px;
+  font-size: 1.2em;
+  padding: 12px 12px;
+  background: #63d488;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+#portfolio .grid .project-desc .project-btn a:hover{
+  box-shadow: 0px 4px 41px #ccc;
 }
 
-
-/* CONTACT */
-#page #contact{
-
-}
-#page form{
+form{
   width: 70%;
   padding: 20px 0;
   margin-bottom: 80px;
 }
-#page .contact-form{
+.contact-form{
 
 }
-#page .contact-form form label{
+.contact-form form label{
   font-size: 1.2em;
   display: inline-block;
   margin-bottom: 8px;
 }
-#page .contact-form form input{
+.contact-form form input{
   border: none;
   border-bottom: 2px solid #63d488;
   background: transparent;
@@ -266,7 +321,7 @@ body {
   margin-bottom: 40px;
   padding:6px;
 }
-#page .contact-form form textarea{
+.contact-form form textarea{
   border: none;
   border-bottom: 2px solid #63d488;
   background: transparent;
@@ -277,154 +332,166 @@ body {
   font-size: 1.2em;
   margin-bottom: 75px;
   margin-left: 2px;
-  resize: none;
+  resize: vertical;
   padding: 6px;
 }
-#page .contact-form form input:focus{
+.contact-form form input:focus{
   border: 2px solid #63d488;
   outline: none;
   margin-top: -2px;
 }
-#page .contact-form form textarea:focus{
+.contact-form form textarea:focus{
   border: 2px solid #63d488;
   margin-left: 0;
   outline: none;
   height: 100px;
   margin-bottom: 12px;
 }
-#page .contact-form form button{
-  width: 180px;
-  padding: 6px;
+.contact-form form button{
+  width: 150px;
+  padding: 12px;
   font-size: 1.2em;
+  font-weight: 200;
   background: #63d488;
+  border-radius: 6px;
   color: #fff;
   border: none;
   outline:none;
+  color: white;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 }
+.contact-form form button{
+  box-shadow: 0px 4px 41px #ccc;
+}
+
 
 
 
 /*/////////////*/
 /*MEDIA QUERIES*/
 /*/////////////*/
-
-
 /* iPhone 4-5 */
-@media only screen
-   and (max-width : 320px) {
-   /* Styles here */
+@media only screen and (max-width: 320px) {
+  /* Styles here */
 }
 /* iPhone 6-8 */
-@media only screen
-   and (max-width : 414px) {
-     .wrapper-menu{
-       display: flex;
-     }
-     #page header nav .navInfo {
-       width: 30%;
-       height: 100px;
-       float: left;
-     }
-     #page header nav .navInfo .names .title {
-       display: none;
-     }
-     #page header nav .navInfo .names .name {
-       font-size: 22px;
-       margin-left: 10px;
-     }
+@media only screen and (max-width: 414px) {
+  .wrapper-menu {
+    display: flex;
+  }
 
-     #page header nav .navMenu {
-       text-align: center;
-       margin:0;
-       width: 100%;
-       height: auto;
-       float: none;
-       display: flex;
-       flex-direction: column-reverse;
-       position: absolute; top: 100px;
-       background: #fff;
-       box-shadow:  0px 20px 50px #ccc;
-     }
-     #page header nav .navMenu a {
-       font-size: 22px;
-       padding: 16px;
-       margin: 4px;
-     }
+  header nav .navInfo {
+    width: 80%;
+    height: 100px;
+    float: left;
+  }
+  header nav .navInfo .names .title {
+    display: none;
+  }
+  header nav .navInfo .names .name {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  header nav .navMenu {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    float: none;
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 100px;
+    background: #fff;
+    box-shadow: 0px 20px 50px #ccc;
+  }
+  header nav .navMenu a {
+    font-size: 22px;
+    padding: 16px;
+    margin: 4px;
+  }
 
-     /* Main Section */
-     #page #main-section {
-       padding-top: 140px;
-     }
-     #page #main-section .front-title {
-       font-size: 1.8em;
-     }
-     #page #main-section .description {
-       font-size: 1.5em;
-       margin-bottom: 150px;
-     }
-     #page #main-section #arrowDown{
-       display: none;
-     }
+  /* Main Section */
+  #main-section {
+    padding: 140px 20px 0 20px;
+  }
+  #main-section .front-title {
+    font-size: 1.8em;
+  }
+  #main-section .description {
+    font-size: 1.5em;
+  }
+  #main-section #arrowDown {
+    display: none;
+  }
 
+  #portfolio {
+    margin-bottom: 60px;
+  }
 
+  #portfolio .grid {
+    grid-template-columns: 1fr;
+  }
+  #portfolio .grid .project-desc {
+    padding: 10px 0;
+  }
 }
-
 /* Tablet */
-@media only screen
-   and (max-width : 768px) {
-     .wrapper-menu{
-       display: flex;
-     }
-     #page header nav .navInfo {
-       width: 30%;
-       height: 100px;
-       float: left;
-     }
-     #page header nav .navInfo .names .title {
-       display: none;
-     }
-     #page header nav .navInfo .names .name {
-       font-size: 22px;
-       margin-left: 10px;
-     }
+@media only screen and (max-width: 768px) {
+  .wrapper-menu {
+    display: flex;
+  }
 
-     #page header nav .navMenu {
-       text-align: center;
-       margin:0;
-       width: 100%;
-       height: auto;
-       float: none;
-       display: flex;
-       flex-direction: column-reverse;
-       position: absolute; top: 100px;
-       background: #fff;
-       box-shadow:  0px 20px 50px #ccc;
-     }
-     #page header nav .navMenu a {
-       font-size: 22px;
-       padding: 16px;
-       margin: 4px;
-     }
+  header nav .navInfo {
+    width: 30%;
+    height: 100px;
+    float: left;
+  }
+  header nav .navInfo .names .title {
+    display: none;
+  }
+  header nav .navInfo .names .name {
+    font-size: 22px;
+  }
+  header nav .navMenu {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    float: none;
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 97px;
+    background: #fff;
+    box-shadow: 0px 20px 50px #ccc;
+  }
+  header nav .navMenu a {
+    font-size: 22px;
+    padding: 16px;
+    margin: 4px;
+  }
 
-     /* Main Section */
-     #page #main-section {
-       padding: 160px 10px 0 10px;
-     }
-     #page #main-section .front-title {
-       font-size: 1.8em;
-     }
-     #page #main-section .description {
-       font-size: 1.5em;
-       margin-bottom: 150px;
-     }
-     #page #main-section #arrowDown{
-       display: none;
-     }
+  /* Main Section */
+  #main-section {
+    padding: 120px 10px 0 10px;
+  }
+  #main-section .front-title {
+    font-size: 1.8em;
+  }
+  #main-section .description {
+    font-size: 1.5em;
+    margin-bottom: 150px;
+  }
+  #main-section #arrowDown {
+    display: none;
+  }
 
-}
-
-/* 13in Laptop */
-@media only screen
-   and (max-width : 1600px) {
-   /* Styles here */
+  #portfolio {
+    margin-bottom: 120px;
+    margin: 0 10px;
+  }
+  #portfolio .grid {
+    grid-template-columns: 1fr;
+  }
 }
