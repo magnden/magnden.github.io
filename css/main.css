@@ -13,7 +13,6 @@ body {
 /* GLOBAL */
 .container {
   margin: 0 auto;
-  width: 80%;
   max-width: 1150px;
 }
 
@@ -227,7 +226,7 @@ header nav .navMenu a:hover {
 #portfolio .grid {
   display: grid;
   grid-template-columns: 58% 42%;
-  grid-column-gap: 30px;
+  grid-column-gap: 3vw;
   grid-row-gap: 50px;
   justify-content: center;
 }
@@ -316,6 +315,7 @@ form{
   border-bottom: 2px solid #63d488;
   background: transparent;
   box-sizing: border-box;
+  border-radius: 0px;
   width: 90%;
   font-size: 1.2em;
   margin-bottom: 40px;
@@ -372,12 +372,8 @@ form{
   background: #EA2027;
   border-radius: 6px;
   color: #fff;
-  width: 400px;
-  margin: 20px 0;
-  display: none;
-}
-.contact-form #warning.show{
-  display: block;
+  width: 300px;
+  margin: 0 0 20px 0;
 }
 
 
@@ -386,7 +382,10 @@ form{
 /*MEDIA QUERIES*/
 /*/////////////*/
 /* iPhone 4-5 */
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 980px) {
+  .container{
+    width: 80%;
+  }
   /* Styles here */
 }
 /* iPhone 6-8 */

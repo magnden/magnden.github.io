@@ -4,6 +4,7 @@ $(document).ready(function(){
 
   var wrapperMenu = $('.wrapper-menu');
   var navMenu = $('.navMenu');
+  $('#warning').hide();
 
   var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
     if (mobile) {
@@ -34,32 +35,46 @@ $(document).ready(function(){
   }
 
   });
-  $('#submit-form').on('click', function(){
+
+  $('#submit-form').click(function(){
     var nameField = $('#name-input');
     var emailField = $('#email-input');
     var messageField = $('#message-field');
     var warning = $('#warning')
-    if(nameField.val || emailField.val() || messageField.val()){
+    if(nameField.val().length > 3 && messageField.val().length > 3){
 
-      if (emailField.val().indexOf('@') > -1 || emailField.val().indexOf('.') > -1) {
+      if (validateEmail(emailField.val())) {
 
-        // Go through
+        $('form').submit();
+        nameField.val('');
+        emailField.val('');
+        messageField.val('');
+        warning.slideDown()
+        warning.html('Email sent!');
+        warning.css('background', '#63d488')
 
-      }
+        setTimeout(function(){
+          warning.slideUp()
+        }, 5000)}
+
       else {
-        emailField.css('border-color', 'red')
-        warning.html('Fill in valid email');
+        warning.html('Double Check your email');
+        warning.slideDown();
+
+
       }
 
-    } else {
-      $('footer').css('background-color', 'red')
+    }
+    else {
+      warning.html('Fill In all the fields');
+      warning.slideDown();
     }
   });
 
 
 });
 
-
+// add header shadow when scrolling past top text
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
   if (scroll > 180) {
@@ -70,6 +85,33 @@ $(window).scroll(function(){
     $("#topHeader").css("box-shadow" , "none");
   }
 })
+
+function liveCheckEmail(){
+  $('#email-input').css('border-color', '#EA2027');
+  if (validateEmail($('#email-input').val())) {
+    $('#email-input').css('border-color', '#63d488');
+  }
+}
+
+function liveCheckName(){
+  $('#name-input').css('border-color', '#EA2027');
+  var val = $('#name-input').val()
+  if (val.length > 1) {
+    $('#name-input').css('border-color', '#63d488');
+  }
+}
+function liveCheckMessage(){
+  $('#message-field').css('border-color', '#EA2027');
+  var val = $('#message-field').val()
+  if (val.length > 10) {
+    $('#message-field').css('border-color', '#63d488');
+  }
+}
+
+function validateEmail(email){
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
 
 function scrollToPortfolio(){
   $('html, body').animate({

@@ -85,17 +85,17 @@
           </div>
           <div class="container">
             <div class="contact-form animated fadeIn">
-              <form>
+              <form method="POST" action="https://formspree.io/dennis.magnusson.contact@gmail.com">
                 <label for="name">Name</label>
                 <br>
-                <input id="name-input" type="text" name="name">
+                <input id="name-input" type="text" name="name" onkeyup="liveCheckName()">
                 <br>
                 <label for="name">Email</label>
                 <br>
-                <input id="email-input" type="email" name="email">
+                <input id="email-input" type="email" name="email" onkeyup="liveCheckEmail()">
                 <br>
                 <label for="message">Message</label><br>
-                <textarea name="message" id="message-field"></textarea><br>
+                <textarea name="message" id="message-field" onkeyup="liveCheckMessage()"></textarea><br>
                 <div id="warning">Please fill in valid Email</div>
                 <button id="submit-form" type="button">Send</button>
 
@@ -106,7 +106,7 @@
 
         <footer style="height: 200px; background: #c9c9c9">
           <div class="container">
-
+            Dennis Magnusson &copy;2018
           </div>
         </footer>
 
