@@ -47,7 +47,6 @@ body {
 
 .section-title-box .section-title {
   margin: 0;
-  align-self: center;
   justify-self: center;
   color: white;
 }
@@ -376,6 +375,49 @@ form{
   margin: 0 0 20px 0;
 }
 
+footer{
+  background: #333;
+  color: white;
+}
+footer .section-title-box{
+  margin:0;
+}
+footer h1{
+  display: inline-block;
+  float: left;
+}
+footer .links{
+  display: inline-block;
+  float: right;
+}
+footer .links a{
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer .links a svg{
+  font-size: 2.8em;
+}
+footer .links a svg.fa-github:hover{
+  color: #333;
+}
+footer .links a svg.fa-twitter:hover{
+  color: #00aced;
+}
+footer .footer-grid{
+  padding: 30px 10px;
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+
+}
+footer .footer-grid h4{
+  font-weight: 200;
+  text-align: right;
+}
+
 
 
 /*/////////////*/
@@ -462,7 +504,7 @@ form{
   }
   header nav .navInfo .names .title {
     display: none;
-  }
+  }9
   header nav .navInfo .names .name {
     font-size: 22px;
   }
@@ -487,7 +529,7 @@ form{
 
   /* Main Section */
   #main-section {
-    padding: 120px 10px 0 10px;
+    padding-top: 120px;
   }
   #main-section .front-title {
     font-size: 1.8em;
@@ -496,15 +538,25 @@ form{
     font-size: 1.5em;
     margin-bottom: 150px;
   }
-  #main-section #arrowDown {
-    display: none;
-  }
 
+  /* Portfolio */
   #portfolio {
     margin-bottom: 120px;
-    margin: 0 10px;
+  }
+  #portfolio .container {
+    padding: 0 10px;
   }
   #portfolio .grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  #contact form{
+    width: 100%;
+    padding: 20px;
+  }
+
+  footer .section-title{
+    text-align: left;
   }
 }

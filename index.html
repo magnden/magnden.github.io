@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <title>Dennis Magnusson</title>
+    <title>Dennis Magnusson | Front-End Web Developer</title>
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
@@ -31,9 +31,9 @@
                 <div class="line-menu half end"></div>
               </div>
               <div class="navMenu">
-                <a href="#" id="toContact">Contact</a>
-                <a href="#" id="toPortfolio">Portfolio</a>
-                <a href="#" class="current" id="toAbout">About</a>
+                <a href="#" class="toContact">Contact</a>
+                <a href="#" class="toPortfolio">Portfolio</a>
+                <a href="#" class="current" class="toAbout">About</a>
               </div>
             </nav>
           </div>
@@ -43,7 +43,7 @@
           <div class="container">
             <h1 class="front-title animated fadeInDown">Hey, I'm a Front-End Developer based in Helsinki, Finland. <br> Have a look at my portfolio. </h1>
             <p class="description animated fadeIn">
-              I have a love for web development and an eye for design. Want to know more? <br> Send me a message <a href="mailto:dennismagnusson@icloud.com?Subject=Message" class="mail">dennismagnusson@icloud.com</a>
+              I have a love for web development and an eye for design. Want to know more? <br> Send me a message <a href="mailto:dennis.magnusson.contact@gmail.com?Subject=Contact+From+Website" class="mail">dennis.magnusson.contact@gmail.com</a>
             </p>
             <div id='arrowDown'>
               <i class="fas fa-chevron-down"></i>
@@ -64,14 +64,14 @@
                 <div class="project-title">WebApp</div>
                 <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
                 <div class="project-langs"><span class="lang">HTML</span> <span class="lang">CSS</span> <span class="lang">JavaScript</span> <span class="lang">jQuery</span></div>
-                <div class="project-btn"><a href="">Check it out</a></div>
+                <div class="project-btn"><a href="#">Check it out</a></div>
               </div>
               <div class="project"></div>
               <div class="project-desc">
                 <div class="project-title">SomeSite</div>
                 <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
                 <div class="project-langs"><span class="lang">Sass</span> <span class="lang">CSS3 Animations</span> <span class="lang">Bootstrap</span> <span class="lang">ReactJS</span></div>
-                <div class="project-btn"><a href="">Check it out</a></div>
+                <div class="project-btn"><a href="#">Check it out</a></div>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@
         <section id="contact">
           <div class="animated fadeIn section-title-box">
             <div class="container">
-              <h1 class="section-title" id="portfolio-title">Contact</h1>
+              <h1 class="section-title" id="contact-title">Contact</h1>
             </div>
           </div>
           <div class="container">
@@ -97,16 +97,30 @@
                 <label for="message">Message</label><br>
                 <textarea name="message" id="message-field" onkeyup="liveCheckMessage()"></textarea><br>
                 <div id="warning">Please fill in valid Email</div>
-                <button id="submit-form" type="button">Send</button>
+                <button id="submit-form" target="_blank" type="button">Send</button>
 
               </form>
             </div>
           </div>
         </section>
 
-        <footer style="height: 200px; background: #c9c9c9">
+        <footer>
+          <div class="animated fadeIn section-title-box">
+            <div class="container">
+              <h1 class="section-title" id="footer-title">Social</h1>
+              <div class="links"><a href="https://github.com/magnden" target="_blank"><i class="fab fa-github"></i></a><a href="https://twitter.com/magnden1" target="_blank"><i class="fab fa-twitter"></i></a> </div>
+            </div>
+          </div>
           <div class="container">
-            Dennis Magnusson &copy;2018
+            <div class="footer-grid">
+              <div class="email">
+                <a href="mailto:dennis.magnusson.contact@gmail.com?Subject=Contact+From+Website" class="mail">dennis.magnusson.contact@gmail.com</a>
+              </div>
+              <h4>Copyright &copy; 2018 Dennis Magnusson</h4>
+            </div>
+
+
+
           </div>
         </footer>
 
