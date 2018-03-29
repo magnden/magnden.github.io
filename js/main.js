@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
   var wrapperMenu = $('.wrapper-menu');
-  var navMenu = $('.nav-icon');
+  var navMenu = $('.navMenu');
   $('#warning').hide();
 
   var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
