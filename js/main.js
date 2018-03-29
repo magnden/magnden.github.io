@@ -11,18 +11,17 @@ $(document).ready(function(){
         navMenu.hide()
         is_mobile = true;
 
-    } else {
-      // Jumping Arrow
-      setInterval(function(){
-        animateArrow();
-      }, 3000);
-
-      // Scroll Animations
-      $('#arrowDown').on('click', scrollToPortfolio);
-      $('.toPortfolio').on('click', scrollToPortfolio);
-      $('.toAbout').on('click', scrollToAbout);
-      $('.toContact').on('click', scrollToContact);
     }
+
+    setInterval(function(){
+      animateArrow();
+    }, 3000);
+
+    // Scroll Animations
+    $('#arrowDown').on('click', scrollToPortfolio);
+    $('.toPortfolio').on('click', scrollToPortfolio);
+    $('.toAbout').on('click', scrollToAbout);
+    $('.toContact').on('click', scrollToContact);
 
 
   wrapperMenu.click(function(){

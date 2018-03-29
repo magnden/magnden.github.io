@@ -255,7 +255,6 @@ header nav .navMenu a:hover {
 }
 #portfolio .grid .project-desc{
   height: 90%;
-  padding: 40px 0;
   width: 100%;
   display: grid;
   grid-gap: 20px;
@@ -432,7 +431,10 @@ footer .footer-grid h4{
 /*/////////////*/
 
 /* iPhone 6-8 */
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 614px) {
+  #portfolio .grid .project{
+    height: 300px;
+  }
 }
 @media only screen and (max-width: 882px) {
   .container{
@@ -490,14 +492,14 @@ footer .footer-grid h4{
     min-height: 500px;
   }
   #main-section .container{
-    grid-template-rows: 55% 45%;
+    grid-template-rows: 50% 50%;
   }
   #main-section .front-title{
-    font-size: 2.2em;
+    font-size: 2.1em;
   }
   #main-section .description{
     max-width: 100%;
-    font-size: 1.35em;
+    font-size: 1.25em;
 
   }
   #main-section #arrowDown {
@@ -510,9 +512,7 @@ footer .footer-grid h4{
     grid-gap: 14px;
     space-between: 18px;
   }
-  #portfolio .grid .project{
-    height: 300px;
-  }
+
   #portfolio .grid .project-desc{
     grid-gap: 12px;
     padding-bottom: 28px;
