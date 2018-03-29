@@ -532,6 +532,9 @@ footer .footer-grid h4{
     display: block;
     margin: 0 auto;
   }
+  .contact-form #warning{
+    width: 100%;
+  }
   footer .footer-grid{
     grid-template-columns: 1fr;
     text-align: center;
