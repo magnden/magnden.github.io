@@ -18,10 +18,10 @@ $(document).ready(function(){
       }, 3000);
 
       // Scroll Animations
-      $('#arrowDown').on('click', scrollToPortfolio)
-      $('.toPortfolio').on('click', scrollToPortfolio)
-      $('.toAbout').on('click', scrollToAbout)
-      $('.toContact').on('click', scrollToContact)
+      $('#arrowDown').on('click', scrollToPortfolio);
+      $('.toPortfolio').on('click', scrollToPortfolio);
+      $('.toAbout').on('click', scrollToAbout);
+      $('.toContact').on('click', scrollToContact);
     }
 
 
@@ -124,7 +124,7 @@ function scrollToPortfolio(){
 }
 function scrollToAbout(){
   $('html, body').animate({
-  scrollTop: $("#main-section").offset().top +100
+  scrollTop: $("section#main-section").offset().top +100
   }, 500);
   $('#toPortfolio').removeClass('current');
   $('#toAbout').addClass('current');

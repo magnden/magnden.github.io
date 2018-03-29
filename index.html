@@ -86,17 +86,19 @@
           <div class="container">
             <div class="contact-form animated fadeIn">
               <form method="POST" action="https://formspree.io/dennis.magnusson.contact@gmail.com">
-                <label for="name">Name</label>
-                <br>
-                <input id="name-input" type="text" name="name" onkeyup="liveCheckName()">
-                <br>
-                <label for="name">Email</label>
-                <br>
-                <input id="email-input" type="email" name="email" onkeyup="liveCheckEmail()">
-                <br>
-                <label for="message">Message</label><br>
-                <textarea name="message" id="message-field" onkeyup="liveCheckMessage()"></textarea><br>
-                <div id="warning">Please fill in valid Email</div>
+                <div class="inputs">
+                  <label for="name">Name</label>
+                  <br>
+                  <input id="name-input" type="text" name="name" onkeyup="liveCheckName()">
+                  <br>
+                  <label for="name">Email</label>
+                  <br>
+                  <input id="email-input" type="email" name="email" onkeyup="liveCheckEmail()">
+                  <br>
+                  <label for="message">Message</label><br>
+                  <textarea name="message" id="message-field" onkeyup="liveCheckMessage()"></textarea><br>
+                  <div id="warning">Please fill in valid Email</div>
+                </div>
                 <button id="submit-form" target="_blank" type="button">Send</button>
 
               </form>
@@ -114,7 +116,7 @@
           <div class="container">
             <div class="footer-grid">
               <div class="email">
-                <a href="mailto:dennis.magnusson.contact@gmail.com?Subject=Contact+From+Website" class="mail">dennis.magnusson.contact@gmail.com</a>
+                Send me a message to <a href="mailto:dennis.magnusson.contact@gmail.com?Subject=Contact+From+Website" class="mail">dennis.magnusson.contact@gmail.com</a>
               </div>
               <h4>Copyright &copy; 2018 Dennis Magnusson</h4>
             </div>
