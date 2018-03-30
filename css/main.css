@@ -187,8 +187,8 @@ header nav .navMenu a:hover {
   position: absolute;
   top: 38px;
   right: 36px;
-  width: 30px;
-  height: 24px;
+  width: 31px;
+  height: 26px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -207,11 +207,11 @@ header nav .navMenu a:hover {
   width: 100%;
 }
 .wrapper-menu .line-menu.start {
-  transition: transform 330ms cubic-bezier(0.63,-0.13, 0.54, 1.5);
+  transition: transform 230ms cubic-bezier(0.63,-0.13, 0.54, 1.5);
   transform-origin: left;
 }
 .wrapper-menu.open .line-menu.start {
-  transform: rotate(42deg);
+  transform: rotate(45deg);
 }
 .wrapper-menu .line-menu.mid{
   opacity: 1;
@@ -222,11 +222,11 @@ header nav .navMenu a:hover {
 }
 .wrapper-menu .line-menu.end {
   align-self: flex-end;
-  transition: transform 330ms cubic-bezier(0.63,-0.13, 0.54, 1.5);
+  transition: transform 230ms cubic-bezier(0.63,-0.13, 0.54, 1.5);
   transform-origin: left;
 }
 .wrapper-menu.open .line-menu.end {
-  transform: rotate(-42deg);
+  transform: rotate(-45deg);
 }
 
 /* Main Section */

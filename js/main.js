@@ -76,7 +76,7 @@ $(document).ready(function(){
 // add header shadow when scrolling past top text
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
-  if (scroll > 180) {
+  if (scroll > 170) {
     $("#topHeader").css("box-shadow" , "0px 4px 51px #ccc");
   }
 
@@ -116,26 +116,27 @@ function scrollToPortfolio(){
   $('html, body').animate({
   scrollTop: $("section#portfolio").offset().top -100
   }, 500);
-  $('#toPortfolio').addClass('current');
-  $('#toAbout').removeClass('current');
-  $('#toContact').removeClass('current');
+  $('.toPortfolio').addClass('current');
+  $('.toAbout').removeClass('current');
+  $('.toContact').removeClass('current');
 
 }
 function scrollToAbout(){
   $('html, body').animate({
-  scrollTop: $("section#main-section").offset().top +100
+  scrollTop: $("body").offset().top
   }, 500);
-  $('#toPortfolio').removeClass('current');
-  $('#toAbout').addClass('current');
-  $('#toContact').removeClass('current');
+  $('.toPortfolio').removeClass('current');
+  $('.toAbout').addClass('current');
+  $('.toContact').removeClass('current');
 }
+
 function scrollToContact(){
   $('html, body').animate({
   scrollTop: $("section#contact").offset().top -100
   }, 500);
-  $('#toPortfolio').removeClass('current');
-  $('#toAbout').removeClass('current');
-  $('#toContact').addClass('current');
+  $('.toPortfolio').removeClass('current');
+  $('.toAbout').removeClass('current');
+  $('.toContact').addClass('current');
 }
 
 function animateArrow(){
