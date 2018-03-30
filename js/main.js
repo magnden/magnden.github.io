@@ -76,7 +76,9 @@ $(document).ready(function(){
 // add header shadow when scrolling past top text
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
-  if (scroll > 170) {
+  if (scroll > 170 && is_mobile != true) {
+    $("#topHeader").css("box-shadow" , "0px 4px 51px #ccc");
+  } else if (scroll > 30 && is_mobile == true){
     $("#topHeader").css("box-shadow" , "0px 4px 51px #ccc");
   }
 
